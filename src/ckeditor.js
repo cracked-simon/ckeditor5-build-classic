@@ -32,7 +32,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
-import StickyPanelView from '@ckeditor/ckeditor5-ui/src/panel/sticky/stickypanelview';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -63,12 +63,11 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	Alignment,
 	Font,
-	StickyPanelView
+	WordCount
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-	viewportTopOffset: 50,
 	toolbar: {
 		items: [
 			'heading',
