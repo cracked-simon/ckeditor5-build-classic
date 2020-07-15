@@ -30,6 +30,10 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -48,6 +52,7 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
 	Indent,
 	Link,
 	List,
@@ -56,18 +61,23 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	Alignment,
+	Font
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	viewportTopOffset: 50,
 	toolbar: {
 		items: [
 			'heading',
 			'|',
+			'fontSize',
+			'fontColor',
 			'bold',
 			'italic',
 			'link',
+			'alignment',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -80,6 +90,20 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo'
+		]
+	},
+	alignment: {
+		options: [ 'left', 'right', 'center', 'justify' ]
+	},
+	fontSize: {
+		options: [
+			9,
+			11,
+			13,
+			'default',
+			17,
+			19,
+			21
 		]
 	},
 	image: {
