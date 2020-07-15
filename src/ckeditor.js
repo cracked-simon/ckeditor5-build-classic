@@ -32,6 +32,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -61,7 +62,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Alignment,
-	Font
+	Font,
+	WordCount
 ];
 
 // Editor configuration.
